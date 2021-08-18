@@ -1,5 +1,6 @@
 package com.ony.controller;
 
+import com.github.houbb.resubmit.api.annotation.Resubmit;
 import com.ony.domain.SysUser;
 import com.ony.service.SysUserService;
 
@@ -40,6 +41,7 @@ public class SysUserController {
         return R.ok(sysUserService.getById(id));
     }
 
+    @Resubmit(ttl = 5)
     @PostMapping
     @ApiOperation("新增")
     public R add(@RequestBody SysUser sysUser) {

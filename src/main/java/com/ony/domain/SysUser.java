@@ -4,6 +4,7 @@ import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -61,6 +62,10 @@ public class SysUser implements Serializable {
 
     @ApiModelProperty("状态 0锁定 1有效")
     private Boolean status;
+
+    @TableLogic(value = "0", delval = "1")
+    @ApiModelProperty("是否删除 0:未删除 1:已删除")
+    private Boolean deleted;
 
     @ApiModelProperty("创建时间")
     private Date createTime;

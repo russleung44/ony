@@ -1,7 +1,7 @@
 spring:
   # 应用名称
   application:
-    name: tumo-boot
+    name: "ony"
 
   # 默认执行的配置文件
   profiles:
@@ -12,6 +12,17 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+  jackson:
+    # 日期格式化
+    date-format: "yyyy-MM-dd HH:mm:ss"
+
 mybatis-plus:
   # xml mapper 路径
   mapper-locations: classpath:mapper/**/*.xml
+
+# 开启 knife4j 增强模式
+knife4j:
+  enable: true
+  setting:
+    enableHost: true
+    enableHostText: "http://127.0.0.1:9090"

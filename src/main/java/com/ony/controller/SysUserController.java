@@ -10,6 +10,7 @@ import com.ony.pojo.vo.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -28,6 +29,7 @@ public class SysUserController {
 
     private final SysUserService sysUserService;
 
+    @Cacheable(value = "user")
     @PostMapping("/page")
     @ApiOperation("条件查询")
     public R<PageInfo<SysUser>> list(@Valid @RequestBody PageParam pageParam) {

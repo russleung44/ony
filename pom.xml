@@ -15,6 +15,7 @@
     <description>ony</description>
     <properties>
         <java.version>1.8</java.version>
+        <redis.version>2.5.3</redis.version>
         <druid.version>1.2.3</druid.version>
         <hutool.version>5.7.2</hutool.version>
         <knife4j.version>3.0.3</knife4j.version>
@@ -52,6 +53,21 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- redis 缓存 start -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- pool 对象池 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+        <!-- redis 缓存 end -->
 
         <!-- mysql -->
         <dependency>

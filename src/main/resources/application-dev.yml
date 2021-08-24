@@ -7,9 +7,9 @@ spring:
   datasource:
     username: root
     password: root2021
-    url: jdbc:mysql://127.0.0.1:3306/ony?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1:3306/ony?autoReconnect=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
   redis:
-    host: localhost
+    host: 127.0.0.1
     port: 6379
     password: 123456
     timeout: 10s

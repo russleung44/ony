@@ -11,6 +11,52 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
+    # 连接池配置
+    druid:
+      # 初始化大小, 默认0
+      initial-size: 5
+      # 最小空闲连接数, 默认0
+      min-idle: 10
+      # 最大连接数, 默认8
+      max-active: 20
+      # 连接等待时间(ms), 默认-1
+      max-wait: 60000
+      # 检测关闭空闲连接的时间(ms), 默认60s
+      time-between-eviction-runs-millis: 2000
+      # 连接最小生存时间(ms), 默认30m
+      min-evictable-idle-time-millis: 600000
+      # stat:数据监控 wall:防火墙
+      filters: stat, wall
+      filter:
+        stat:
+          enabled: true
+          db-type: mysql
+          log-slow-sql: true
+          slow-sql-millis: 1000
+      # 监控配置
+      web-stat-filter:
+        enabled: true
+        # 过滤所有url
+        url-pattern: /*
+        # 排除一些不必要的url
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+        # 开启session统计功能
+        session-stat-enable: true
+        # session的最大个数,默认100
+        session-stat-max-count: 1000
+      # 配置监控页面
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        # 不允许清空统计数据,重新计算
+        reset-enable: false
+        # 配置监控页面访问用户名密码
+        login-username: root
+        login-password: 123
+        # 允许访问的地址，如果allow没有配置或者为空，则允许所有访问
+        allow: 127.0.0.1
+        # 拒绝访问的地址，deny优先于allow，如果在deny列表中，就算在allow列表中，也会被拒绝
+        deny:
 
   jackson:
     # 日期格式化

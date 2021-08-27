@@ -56,4 +56,16 @@ public class GlobalExceptionHandler {
         return R.fail(message);
     }
 
+    /**
+     * 非法参数异常
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(IllegalArgumentException.class)
+    public R illegalArgumentExceptionHandler(IllegalArgumentException e) {
+        log.error(e.getMessage(), e);
+        String message = Objects.requireNonNull(e.getMessage());
+        return R.fail(message);
+    }
+
 }

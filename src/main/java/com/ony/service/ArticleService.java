@@ -5,7 +5,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ony.domain.Article;
 import com.ony.mapper.ArticleMapper;
-import com.ony.pojo.vo.PageParam;
+import com.ony.pojo.PageParam;
 import com.ony.repository.ArticleRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

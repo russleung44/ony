@@ -1,6 +1,6 @@
 package com.ony.excetion;
 
-import com.ony.pojo.vo.HttpCode;
+import com.ony.pojo.HttpCode;
 import lombok.Getter;
 
 /**
@@ -8,7 +8,7 @@ import lombok.Getter;
  * @author Tony
  * @date 2021/8/18
  */
-public class CustomException extends RuntimeException{
+public class CustomException extends BaseException{
 
     private static final long serialVersionUID = 1L;
 

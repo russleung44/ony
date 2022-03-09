@@ -1,6 +1,6 @@
 package com.ony.config;
 
-import com.ony.websocket.SocketHandler;
+import com.ony.handler.SocketHandler;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;

@@ -5,7 +5,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ony.domain.SysUser;
 import com.ony.mapper.SysUserMapper;
-import com.ony.pojo.vo.PageParam;
+import com.ony.pojo.PageParam;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

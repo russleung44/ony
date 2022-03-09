@@ -5,8 +5,8 @@ import com.ony.domain.SysUser;
 import com.ony.service.SysUserService;
 
 import com.github.pagehelper.PageInfo;
-import com.ony.pojo.vo.PageParam;
-import com.ony.pojo.vo.R;
+import com.ony.pojo.PageParam;
+import com.ony.pojo.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;

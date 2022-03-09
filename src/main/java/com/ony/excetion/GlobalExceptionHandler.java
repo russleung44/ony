@@ -1,6 +1,6 @@
 package com.ony.excetion;
 
-import com.ony.pojo.vo.R;
+import com.ony.pojo.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.MethodArgumentNotValidException;

@@ -1,4 +1,4 @@
-package com.ony.pojo.vo;
+package com.ony.pojo;
 
 import lombok.Getter;
 

@@ -58,10 +58,6 @@ spring:
         # 拒绝访问的地址，deny优先于allow，如果在deny列表中，就算在allow列表中，也会被拒绝
         deny:
 
-  jackson:
-    # 日期格式化
-    date-format: "yyyy-MM-dd HH:mm:ss"
-
   elasticsearch:
     rest:
       username: "elastic"

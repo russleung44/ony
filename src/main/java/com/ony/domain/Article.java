@@ -29,7 +29,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
-@TableName("article")
+@TableName(value = "article", autoResultMap = true)
 @Document(indexName = "article_index")
 public class Article implements Serializable {
     private static final long serialVersionUID = -29097798836788594L;

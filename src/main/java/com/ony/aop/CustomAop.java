@@ -33,7 +33,7 @@ public class CustomAop {
     @AfterThrowing(throwing = "ex", pointcut = "apiController()")
     public void afterThrowing(JoinPoint joinPoint, Throwable ex) {
         log.error("==========异常输出==========");
-        log.info("side-city");
+        log.info("inside-city");
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         if (attributes == null) {
             return;

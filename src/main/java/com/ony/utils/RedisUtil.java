@@ -2,6 +2,7 @@ package com.ony.utils;
 
 
 import cn.hutool.core.collection.CollUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import java.util.concurrent.TimeUnit;
  * @author Tony
  * @date 2021/8/19
  */
+@Slf4j
 @SuppressWarnings({"ALL"})
 @Component
 public class RedisUtil {
